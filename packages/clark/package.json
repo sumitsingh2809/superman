@@ -23,5 +23,6 @@
     "dependencies": {
         "csv-parse": "^5.3.0",
         "csv-write-stream": "^2.0.0"
-    }
+    },
+    "gitHead": "65bebfeee723d822fffbc9b676ebaf75bd70a2f2"
 }
