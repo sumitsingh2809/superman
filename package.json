@@ -1,0 +1,19 @@
+{
+    "name": "superman",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "test": "lerna run test",
+        "new-version": "lerna version --conventional-commits --yes",
+        "diff": "lerna diff",
+        "publish:old": "lerna run tsc && lerna publish",
+        "publish": "lerna publish"
+    },
+    "devDependencies": {
+        "@types/node": "^18.6.1",
+        "lerna": "^5.2.0",
+        "typescript": "^4.7.4"
+    }
+}

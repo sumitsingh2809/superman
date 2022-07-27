@@ -1,0 +1,4 @@
+npx lerna init
+npx nx graph
+
+lerna create package-name

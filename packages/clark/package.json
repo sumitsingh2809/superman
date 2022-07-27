@@ -1,0 +1,27 @@
+{
+    "name": "@superman/clark",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "Sumit Singh <sumitsingh.lko95@gmail.com>",
+    "homepage": "",
+    "license": "ISC",
+    "main": "src/index.ts",
+    "typings": "src/clark.d.ts",
+    "directories": {
+        "lib": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "src"
+    ],
+    "scripts": {
+        "test": "echo \"Test not defined\""
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "csv-parse": "^5.3.0",
+        "csv-write-stream": "^2.0.0"
+    }
+}
