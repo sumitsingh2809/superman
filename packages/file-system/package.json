@@ -5,8 +5,8 @@
     "author": "Sumit Singh <sumitsingh.lko95@gmail.com>",
     "homepage": "",
     "license": "MIT",
-    "main": "src/index.ts",
-    "typings": "src/file-system.d.ts",
+    "main": "index.ts",
+    "typings": "index.d.ts",
     "directories": {
         "lib": "src",
         "test": "__tests__"
