@@ -4,7 +4,7 @@
     "description": "> TODO: description",
     "author": "Sumit Singh <sumitsingh.lko95@gmail.com>",
     "homepage": "",
-    "license": "ISC",
+    "license": "MIT",
     "main": "src/index.ts",
     "typings": "src/clark.d.ts",
     "directories": {
@@ -24,5 +24,5 @@
         "csv-parse": "^5.3.0",
         "csv-write-stream": "^2.0.0"
     },
-    "gitHead": "65bebfeee723d822fffbc9b676ebaf75bd70a2f2"
+    "gitHead": "653781ba352ecada119ee4570b8b559b4cc9ec0c"
 }
