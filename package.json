@@ -1,5 +1,5 @@
 {
-    "name": "@superman/core",
+    "name": "the-boys",
     "private": true,
     "workspaces": [
         "packages/*"

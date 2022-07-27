@@ -1,12 +1,12 @@
 {
-    "name": "@superman/clark",
+    "name": "@the-boys/file-system",
     "version": "0.0.5-alpha.0",
     "description": "> TODO: description",
     "author": "Sumit Singh <sumitsingh.lko95@gmail.com>",
     "homepage": "",
     "license": "MIT",
     "main": "src/index.ts",
-    "typings": "src/clark.d.ts",
+    "typings": "src/file-system.d.ts",
     "directories": {
         "lib": "src",
         "test": "__tests__"
@@ -24,5 +24,5 @@
         "csv-parse": "^5.3.0",
         "csv-write-stream": "^2.0.0"
     },
-    "gitHead": "3c0b81c9c7dbaa192b4e4cc555cb22bdaac6ba1c"
+    "gitHead": "e73f2f2c41b9c93bddccd8ade65880207e00d986"
 }
