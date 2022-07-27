@@ -5,17 +5,20 @@
     "author": "Sumit Singh <sumitsingh.lko95@gmail.com>",
     "homepage": "",
     "license": "MIT",
-    "main": "index.ts",
-    "typings": "index.d.ts",
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
     "directories": {
         "lib": "src",
         "test": "__tests__"
     },
     "files": [
-        "src"
+        "build",
+        "index.js"
     ],
     "scripts": {
-        "test": "echo \"Test not defined\""
+        "test": "echo \"Test not defined\"",
+        "clean": "del ./build/*",
+        "build": "npm run clean && tsc"
     },
     "publishConfig": {
         "access": "public"

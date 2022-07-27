@@ -6,6 +6,7 @@
     ],
     "scripts": {
         "test": "lerna run test",
+        "build": "lerna run build --stream",
         "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff",
         "publish:old": "lerna run tsc && lerna publish",
@@ -13,6 +14,7 @@
     },
     "devDependencies": {
         "@types/node": "^18.6.1",
+        "del-cli": "^5.0.0",
         "lerna": "^5.2.0",
         "typescript": "^4.7.4"
     },
