@@ -15,6 +15,7 @@ module.exports = {
         'no-tabs': 0,
         'comma-dangle': 'off',
         'arrow-body-style': 'off',
+        'import/prefer-default-export': 'off',
         'import/extensions': [
             'error',
             'ignorePackages',

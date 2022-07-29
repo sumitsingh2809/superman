@@ -58,4 +58,4 @@ class WriteStream {
     }
 }
 
-export default WriteStream;
+export { WriteStream };

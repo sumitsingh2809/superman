@@ -17,6 +17,7 @@
     ],
     "scripts": {
         "test": "echo \"Test not defined\"",
+        "start": "ts-node-dev --poll index.ts",
         "clean": "del ./build/*",
         "build": "npm run clean && tsc"
     },
