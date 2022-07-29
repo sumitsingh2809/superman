@@ -1,11 +1,15 @@
 import * as fs from 'fs';
 // import fse from 'fs-extra';
 
-export class WriteStream {
+class WriteStream {
     private path: string;
+
     private isFirstChunk: boolean;
+
     private isObject: boolean;
+
     private isArray: boolean;
+
     private stream: fs.WriteStream;
 
     constructor(path: string) {
@@ -21,9 +25,10 @@ export class WriteStream {
     };
 
     public write = (data: string) => {
+        let dataChunk: string = data;
         if (typeof data === 'object' && data !== null) {
             this.isObject = true;
-            data = JSON.stringify(data);
+            dataChunk = JSON.stringify(data);
         }
 
         if (this.path.endsWith('.json')) {
@@ -33,15 +38,15 @@ export class WriteStream {
             }
 
             if (this.isObject) {
-                writeChunk += `${this.getDelimiter()}${data}`;
+                writeChunk += `${this.getDelimiter()}${dataChunk}`;
             } else {
-                writeChunk += `${this.getDelimiter()}"${data}"`;
+                writeChunk += `${this.getDelimiter()}"${dataChunk}"`;
             }
 
             this.stream.write(writeChunk);
             this.isFirstChunk = false;
         } else {
-            this.stream.write(data);
+            this.stream.write(dataChunk);
         }
     };
 
@@ -52,3 +57,5 @@ export class WriteStream {
         this.stream.end();
     }
 }
+
+export default WriteStream;

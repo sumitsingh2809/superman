@@ -14,14 +14,15 @@ module.exports = {
         indent: [0, 'tab'],
         'no-tabs': 0,
         'comma-dangle': 'off',
+        'arrow-body-style': 'off',
         'import/extensions': [
             'error',
             'ignorePackages',
             {
-              js: 'never',
-              jsx: 'never',
-              ts: 'never',
-              tsx: 'never'
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never'
             }
         ]
     },
