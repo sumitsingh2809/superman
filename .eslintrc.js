@@ -11,11 +11,18 @@ module.exports = {
     },
     plugins: ['@typescript-eslint'],
     rules: {
+        // code: 120,
+        'max-len': ['warn', { code: 120, tabWidth: 4 }],
         indent: [0, 'tab'],
         'no-tabs': 0,
+        'no-continue': 'off',
+        'no-plusplus': 'off',
         'comma-dangle': 'off',
         'arrow-body-style': 'off',
         'import/prefer-default-export': 'off',
+        'no-unused-vars': 'warn',
+        'no-restricted-syntax': 'off',
+        'object-curly-newline': 'off',
         'import/extensions': [
             'error',
             'ignorePackages',
