@@ -1,7 +1,8 @@
 import * as fs from 'fs';
 import { parse } from 'csv-parse';
 import { Transform } from 'stream';
-import csvWriteStream from 'csv-write-stream';
+// import csvWriteStream from 'csv-write-stream';
+import * as csvWriteStream from 'csv-write-stream';
 // import {  } from 'fs/promises'
 // import { setTimeout } from 'timers/promises';
 
@@ -33,7 +34,11 @@ const writeStream = async (filePath: string, headers: Array<string>): Promise<an
     }
 };
 
-const addColumn = async (filePath: string, column: string, fetchDataFunc: (row: any) => Promise<any>): Promise<any> => {
+const addColumn = async (
+    filePath: string,
+    columns: Array<string>,
+    fetchDataFunc: (row: any) => Promise<any>
+): Promise<any> => {
     try {
         let count = 0;
         let headers = [];
@@ -44,7 +49,9 @@ const addColumn = async (filePath: string, column: string, fetchDataFunc: (row: 
             count++;
             if (count === 1) {
                 headers = row;
-                writer = await writeStream(`${filePath.split('.csv')[0]}_updated.csv`, [...headers, column]);
+                writer = await writeStream(`${filePath.split('.csv')[0]}_updated.csv`, [
+                    ...new Set([...headers, ...columns])
+                ]);
                 continue;
             }
 
@@ -56,7 +63,9 @@ const addColumn = async (filePath: string, column: string, fetchDataFunc: (row: 
             }
 
             const newColumnData = await fetchDataFunc(obj);
-            writer.write({ ...obj, [column]: newColumnData });
+            // console.log(obj);
+            // console.log(newColumnData);
+            writer.write({ ...obj, ...newColumnData });
         }
 
         writer.end();
